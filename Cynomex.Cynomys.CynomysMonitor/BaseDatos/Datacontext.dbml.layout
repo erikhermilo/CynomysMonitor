@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.25, 8.5" name="Datacontext">
+  <DataContextMoniker Name="/DatacontextDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0c6fb056-708d-4189-8bf3-82ea643f7a75" absoluteBounds="9.25, 4.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DatacontextDataContext/Alerta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7bcae268-3dba-4a06-bc23-2e3200012396" absoluteBounds="9.265, 4.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc920084-9c83-40d9-ab24-69939434a916" absoluteBounds="6.25, 3.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DatacontextDataContext/Usuariofalta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b65d09ce-a169-467c-99c4-2ade1a7a92be" absoluteBounds="6.265, 3.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f6cfb25f-8054-46c3-b3f6-95e528b99415" absoluteBounds="6.25, 5.375, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DatacontextDataContext/ContactoEmergencia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4cab47c0-5fa2-4db7-8449-19d4658bdd0e" absoluteBounds="6.265, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b21e40bc-6c68-4727-8fcf-993e14c2519a" absoluteBounds="12, 4.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DatacontextDataContext/Denuncia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ed9bff5-1d04-4d1a-9d00-0c86526b7d02" absoluteBounds="12.015, 4.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e46d08a-7164-4f5d-ae08-8908015aebfd" absoluteBounds="0.75, 4.75, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/DatacontextDataContext/Sexo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5e0e2ff-91de-42c4-b63c-f29ba64a016e" absoluteBounds="0.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f6c4084-8f32-46ff-9c82-364733d6f668" absoluteBounds="6.5, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DatacontextDataContext/TIpoAlerta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ff75353-4742-4164-9e6a-e2656e64b1e7" absoluteBounds="6.515, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="82d38b1c-1612-430c-8c73-95969a30cf78" absoluteBounds="3.5, 4.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DatacontextDataContext/Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7c82ad7-cbe9-4547-b2e7-f3371628608c" absoluteBounds="3.515, 4.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 5.38544840494792); (12 : 5.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatacontextDataContext/Alerta/Alerta_Denuncia" />
+      <nodes>
+        <classShapeMoniker Id="0c6fb056-708d-4189-8bf3-82ea643f7a75" />
+        <classShapeMoniker Id="b21e40bc-6c68-4727-8fcf-993e14c2519a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 1.94399251302083); (8.40625 : 5.00564697265625); (9.25 : 5.00564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatacontextDataContext/TIpoAlerta/TIpoAlerta_Alerta" />
+      <nodes>
+        <classShapeMoniker Id="8f6c4084-8f32-46ff-9c82-364733d6f668" />
+        <classShapeMoniker Id="0c6fb056-708d-4189-8bf3-82ea643f7a75" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.22157348632813); (9.25 : 5.22157348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatacontextDataContext/Usuario/Usuario_Alerta" />
+      <nodes>
+        <classShapeMoniker Id="82d38b1c-1612-430c-8c73-95969a30cf78" />
+        <classShapeMoniker Id="0c6fb056-708d-4189-8bf3-82ea643f7a75" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.38064697265625); (6.25 : 4.38064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatacontextDataContext/Usuario/Usuario_Usuariofalta" />
+      <nodes>
+        <classShapeMoniker Id="82d38b1c-1612-430c-8c73-95969a30cf78" />
+        <classShapeMoniker Id="bc920084-9c83-40d9-ab24-69939434a916" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.92390055338542); (6.25 : 5.92390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatacontextDataContext/Usuario/Usuario_ContactoEmergencia" />
+      <nodes>
+        <classShapeMoniker Id="82d38b1c-1612-430c-8c73-95969a30cf78" />
+        <classShapeMoniker Id="f6cfb25f-8054-46c3-b3f6-95e528b99415" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.80111022949219); (6 : 4.80111022949219); (6 : 4.875); (8.32291666666667 : 4.875 : JumpStart); (8.48958333333333 : 4.875 : JumpEnd); (9 : 4.875); (9 : 4); (13 : 4); (13 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatacontextDataContext/Usuario/Usuario_Denuncia" />
+      <nodes>
+        <classShapeMoniker Id="82d38b1c-1612-430c-8c73-95969a30cf78" />
+        <classShapeMoniker Id="b21e40bc-6c68-4727-8fcf-993e14c2519a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.34699625651042); (3.5 : 5.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatacontextDataContext/Sexo/Sexo_Usuario" />
+      <nodes>
+        <classShapeMoniker Id="8e46d08a-7164-4f5d-ae08-8908015aebfd" />
+        <classShapeMoniker Id="82d38b1c-1612-430c-8c73-95969a30cf78" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

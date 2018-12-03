@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cynomex.Cynomys.CynomysMonitor</RootNamespace>
     <AssemblyName>Cynomex.Cynomys.CynomysMonitor</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,10 +32,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -43,14 +47,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDatos\Alerta.cs" />
+    <Compile Include="BaseDatos\Datacontext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datacontext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatos\Denuncia.cs" />
+    <Compile Include="BaseDatos\Usuario.cs" />
+    <Compile Include="BaseDatos\Usuariofalta.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Denuncia.cs" />
+    <Compile Include="Modelos\DenunciaEX.cs" />
+    <Compile Include="Modelos\Usuariofalta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\ConsultaAlteras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ConsultaAlteras.Designer.cs">
+      <DependentUpon>ConsultaAlteras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ConsultaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ConsultaUsuarios.Designer.cs">
+      <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Denuncias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Denuncias.Designer.cs">
+      <DependentUpon>Denuncias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Mapa.Designer.cs">
+      <DependentUpon>Mapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RevisionDenuncias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RevisionDenuncias.Designer.cs">
+      <DependentUpon>RevisionDenuncias.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vistas\ConsultaAlteras.resx">
+      <DependentUpon>ConsultaAlteras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ConsultaUsuarios.resx">
+      <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Denuncias.resx">
+      <DependentUpon>Denuncias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Mapa.resx">
+      <DependentUpon>Mapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RevisionDenuncias.resx">
+      <DependentUpon>RevisionDenuncias.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="BaseDatos\Datacontext.dbml.layout">
+      <DependentUpon>Datacontext.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -59,7 +127,17 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BaseDatos\Datacontext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Datacontext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Cynomex.Cynomys.CynomysMonitor.BaseDatos.Alerta.datasource" />
+    <None Include="Properties\DataSources\Cynomex.Cynomys.CynomysMonitor.BaseDatos.Denuncia.datasource" />
+    <None Include="Properties\DataSources\Cynomex.Cynomys.CynomysMonitor.BaseDatos.Usuario.datasource" />
+    <None Include="Properties\DataSources\Cynomex.Cynomys.CynomysMonitor.Modelos.DenunciaEX.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -69,6 +147,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Recursos\Dormido.gif" />
+    <Content Include="Recursos\Fail.png" />
+    <Content Include="Recursos\pixil-gif-drawing.gif" />
+    <Content Include="Recursos\Success.png" />
+    <None Include="Resources\StandarIcon.ico" />
+    <Resource Include="Recursos\CynomysICO.ico" />
+    <Content Include="Recursos\CynomysICOOffline.ico" />
+    <Content Include="Recursos\CynomysICOOnline.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
